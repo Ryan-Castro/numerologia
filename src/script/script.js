@@ -1,32 +1,49 @@
 let synth = new SpeechSynthesisUtterance();
+let audio = document.querySelector("#mainAudio")
+let start = false
+let enderEmail = false
+let showEmail = false
+let ended = false
+audio.addEventListener("ended", ()=>{
+    starAnalyzing()
+})
 
 function starAnalyzing() {
     let _name = document.querySelector("#name").value
-    let text = "Olá " + _name + " tudo bem? Isso é um teste e irei analizar seu nome, pois o resultado da soma numerológica cabalista do seu nome é: "
-    //let nameObject = transformInObj(_name)
-    text += analyzingName(_name)
-    text += ". E baseado nisso terá a descrição do seu nome aqui"
-    document.querySelector("div").innerHTML = "Resposta: " + text
-    speak(text)
+    let numberCab = analyzingName(_name)
+    if(!start){
+        document.querySelector("#secInputName").style.display = "none"
+        document.querySelector("#secAnalizing").style.display = "flex"
+        document.querySelector("#analizingName").innerHTML = _name
+        speak(`./src/audios/init${numberCab}.mp3`)
+        start = true
+        return
+    }
+    if(!enderEmail){
+        speak(`./src/audios/inputEmail.mp3`)
+        enderEmail = true
+        return
+    }
+    if(!showEmail){
+        document.querySelector("#secAnalizing").style.display = "none"
+        document.querySelector("#secEmail").style.display = "flex"
+        showEmail = true
+        return
+    }
+    if(!ended){
+        alert(`aqui vai ter mais um audio`)
+        document.querySelector("#secEmail").style.display = "none"
+        document.querySelector("#secBuy").style.display = "flex"
+        ended = true
+    }
+
 } 
-function speak(text){
-    synth.text = text
-    window.speechSynthesis.speak(synth)
+function speak(linkAudio){
+    audio.src = linkAudio
+    
+    audio.play()
 }
-function transformInObj(name){
-    let nameSplited = name.toLowerCase().split("")
-    let object = {}
-    nameSplited.forEach(letter => {
-        if(letter != " "){
-            if(!object[letter]){
-                object[letter] = 1
-            } else {
-                object[letter]++
-            }
-        }
-    }); 
-    return object
-}
+
 function analyzingName(name){
     let sumName = 0
     name.toLowerCase().split("").forEach(letter=>{

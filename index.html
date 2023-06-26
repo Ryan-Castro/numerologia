@@ -7,12 +7,27 @@
     <title>Numerologia</title>
 </head>
 <body>
+    <audio id="mainAudio" src=""></audio>
     <main>
-        <section>
+        <section id="secInputName">
+            <h2>Digite seu nome para saber mais sobre você </h2>
             <input type="text" placeholder="Digite seu primeiro nome" id="name">
-            <button onclick="starAnalyzing()">Começar</button>
+            <input type="button" value="Analisar" onclick="starAnalyzing()">
         </section>
-        <div></div>
+        <section id="secAnalizing">
+            <h1 id="analizingName"></h1>
+            <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="">
+        </section>
+        <section id="secEmail">
+            <h2>Digite suas informações</h2>
+            <input type="email" placeholder="email">
+            <input type="text" placeholder="Nome completo">
+            <input type="button" value="enviar" onclick="starAnalyzing()">
+        </section>
+        <section id="secBuy">
+            <h2>Compre nosso curso por um preço x e entenda mais sobre você por meio da Numerologia</h2>
+            <h3>aqui vai ter a tela montada</h3>
+        </section>
     </main>
     <script src="./src/script/Json.js"></script>
     <script src="./src/script/script.js"></script>

@@ -28,10 +28,46 @@ main{
 }
 
 section{
-    display: flex;
+    display: flex;  
     flex-direction: column;
-    width: 60%;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+} 
+#secInputName{
+    justify-content: space-evenly;
 }
+#secInputName input{
+    width: 100%;
+}
+#secInputName input{
+    width: 100%;
+}
+#secAnalizing{
+    display: none;
+    position: relative;
+}
+#secAnalizing h1{
+    position: absolute;
+    top: 10px;
+    text-transform: capitalize;
+}
+#secAnalizing img{
+    height: 40%;
+    animation: spin infinite 10s linear;
+}
+#secEmail{
+    display: none;
+}
+#secBuy{
+    display: none;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); height: 40%; }
+    50% { transform: rotate(180deg); height: 43%;}
+    100% { transform: rotate(360deg); height: 40%;}
+}
+  
 input{
     padding: 10px;
 }
@@ -40,9 +76,6 @@ button{
     margin-top: 10px;
 }
 
-div{
-    padding: 50px;
-}
 
 @media (max-width: 650px) {
     main{
