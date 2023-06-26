@@ -52,6 +52,7 @@ div{
 @media (max-width: 500px) {
     main{
         width: 90%;
+        height: 70%;
     }
     section{
         width: 80%;
