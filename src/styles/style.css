@@ -12,6 +12,7 @@ body{
     align-items: center;
     background-image: url("https://i0.wp.com/alquimiaoperativa.com/wp-content/uploads/2017/11/1280-720-Numerologia-Cabal%C3%ADstica_-Anatomia-Completa-de-um-Mapa-Numerol%C3%B3gico.jpg?fit=1024%2C576&ssl=1");
     background-size: cover;
+    background-position: center center;
 }
 main{
     width: 50%;
@@ -41,4 +42,18 @@ button{
 
 div{
     padding: 50px;
+}
+
+@media (max-width: 650px) {
+    main{
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    main{
+        width: 90%;
+    }
+    section{
+        width: 80%;
+    }
 }
