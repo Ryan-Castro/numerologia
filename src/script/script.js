@@ -29,7 +29,7 @@ function transformInObj(name){
 }
 function analyzingName(name){
     let sumName = 0
-    name.split("").forEach(letter=>{
+    name.toLowerCase().split("").forEach(letter=>{
         sumName += tableCabalistic[letter]
     })
     while (sumName>9) {
