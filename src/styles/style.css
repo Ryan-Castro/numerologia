@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i0.wp.com/alquimiaoperativa.com/wp-content/uploads/2017/11/1280-720-Numerologia-Cabal%C3%ADstica_-Anatomia-Completa-de-um-Mapa-Numerol%C3%B3gico.jpg?fit=1024%2C576&ssl=1");
+    background-size: cover;
+}
+main{
+    width: 50%;
+    height: 50%;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.452);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.829);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+input{
+    padding: 10px;
+}
+button{
+    padding: 8px;
+    margin-top: 10px;
+}
+
+div{
+    padding: 50px;
+}
