@@ -16,7 +16,7 @@ function starAnalyzing() {
         document.querySelector("#secAnalizing").style.display = "flex"
         document.querySelector("#analizingName").innerHTML = _name
         presetention = true
-        starAnalyzing()
+        speak(`./src/audios/presentation.mp3`)
         return
     }
     if(!enderEmail){
