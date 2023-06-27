@@ -1,6 +1,6 @@
 let synth = new SpeechSynthesisUtterance();
 let audio = document.querySelector("#mainAudio")
-let start = false
+let presetention = false
 let enderEmail = false
 let showEmail = false
 let ended = false
@@ -11,12 +11,12 @@ audio.addEventListener("ended", ()=>{
 function starAnalyzing() {
     let _name = document.querySelector("#name").value
     let numberCab = analyzingName(_name)
-    if(!start){
+    if(!presetention){
         document.querySelector("#secInputName").style.display = "none"
         document.querySelector("#secAnalizing").style.display = "flex"
         document.querySelector("#analizingName").innerHTML = _name
-        speak(`./src/audios/init${numberCab}.mp3`)
-        start = true
+        presetention = true
+        starAnalyzing()
         return
     }
     if(!enderEmail){
