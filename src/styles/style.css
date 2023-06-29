@@ -28,56 +28,60 @@ main{
 }
 
 section{
-    display: flex;  
+    display: none;  
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 90%;
-} 
-#secInputName{
-    font-family: Arial, Helvetica, sans-serif;
-    justify-content: space-between;
-    text-align: center;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    gap: 20px;
     padding: 20px 100px;
 }
-#secInputName h1{
+section h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 48px;
 
 }
-#secInputName h2{
+section h2{
     font-size: 36px;
     font-weight: 300;
 }
-#secInputName p{
+section p{
     font-size: 20px;
 }
-#secInputName h3{
+section h3{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
     color: aqua;
+    margin-bottom: -20px;
 }
-#secInputName h3>hr{
+section h3>hr{
     height: 1px;
     width: 100%;
     margin-left: 10px;
     border-color: aqua;
 }
-#secInputName input{
+section input{
     width: 100%;
     font-size: 20px;
 }
-#secInputName input{
+#secFullName select, #secEmail select{
+    width: 100%;
+    padding: 10px;
+}
+#selectDate{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
 }
-#secAnalizing{
-    display: none;
-    position: relative;
-    color: white;
+#selectDate select{
+    width: 30%;
+    padding: 10px;
 }
 #secAnalizing h1{
     position: absolute;
@@ -88,34 +92,7 @@ section{
     height: 40%;
     animation: spin infinite 10s linear;
 }
-#secEmail{
-    display: none;
-    justify-content: flex-start;
-    color: white;
-    width: 70%;
-    gap: 20px;
-}
-#secEmail h3{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    color: aqua;
-}
-#secEmail h3>hr{
-    height: 1px;
-    width: 100%;
-    margin-left: 10px;
-    border-color: aqua;
-}
-#secEmail input{
-    width: 100%;
-    font-size: 20px;
-}
-#secBuy{
-    display: none;
-}
+
 @keyframes spin {
     0% { transform: rotate(0deg); height: 40%; }
     50% { transform: rotate(180deg); height: 43%;}
