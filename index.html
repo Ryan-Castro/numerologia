@@ -8,77 +8,98 @@
 </head>
 <body>
     <audio id="mainAudio" src=""></audio>
-    <main>
-
-        <section id="secInputName">
-            <h1>TESTE NUMEROLÓGICO REVELA</h1>
-            <h2>Descubra pela sua Data de nascimento o melhor caminho para vocêseguir em 2023</h2>
-            <p>Digite os dados abaixo para você receber seu Relatório GRATUITO em vídeo de Numerologia personalizado, e descubra as oportunidades ocultas que você ainda não descobriu!</p>
-            <h3>Digite Seu Primeiro Nome<hr></h3>
-            <input type="text" placeholder="Digite seu primeiro nome" id="inputName">
-            <input type="button" value="Analisar" onclick="starAnalyzing()">
-        </section>
-        
-        <section id="secInputDate">
-            <h1>TESTE NUMEROLÓGICO REVELA</h1>
-            <h2>Descubra pela sua Data de nascimento o melhor caminho para vocêseguir em 2023</h2>
-            <p>Digite os dados abaixo para você receber seu Relatório GRATUITO em vídeo de Numerologia personalizado, e descubra as oportunidades ocultas que você ainda não descobriu!</p>
-            <h3>Informe Sua data de nascimento<hr></h3>
-            <div id="selectDate">
-                <select id="inputDay"></select>
-                <select id="inputMonth"></select>
-                <select id="inputYear"></select>
-            </div>
-            <input type="button" value="Analisar" onclick="starAnalyzing()">
-        </section>
-
-
-        <section id="secAnalizing">
-            <h2 id="analizingName"></h2>
-            <h2 id="analizingDate"></h2>
-            <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="">
-        </section>
+    <div id="container1">
+        <img src="src/images/logo.png" alt="Logo">
+        <main>
+            <section id="secInputName">
+                <h1>TESTE NUMEROLÓGICO REVELA</h1>
+                <h2>Descubra pela sua Data de nascimento o melhor caminho para vocêseguir em 2023</h2>
+                <p>Digite os dados abaixo para você receber seu Relatório GRATUITO em vídeo de Numerologia personalizado, e descubra as oportunidades ocultas que você ainda não descobriu!</p>
+                <h3>Digite Seu Primeiro Nome<hr></h3>
+                <input type="text" placeholder="Digite seu primeiro nome" id="inputName">
+                <input type="button" value="Analisar" onclick="starAnalyzing()" class="btnContinue">
+            </section>
+            
+            <section id="secInputDate">
+                <h1>TESTE NUMEROLÓGICO REVELA</h1>
+                <h2>Descubra pela sua Data de nascimento o melhor caminho para vocêseguir em 2023</h2>
+                <p>Digite os dados abaixo para você receber seu Relatório GRATUITO em vídeo de Numerologia personalizado, e descubra as oportunidades ocultas que você ainda não descobriu!</p>
+                <h3>Informe Sua data de nascimento<hr></h3>
+                <div id="selectDate">
+                    <select id="inputDay"></select>
+                    <select id="inputMonth"></select>
+                    <select id="inputYear"></select>
+                </div>
+                <input type="button" value="Analisar" onclick="starAnalyzing()" class="btnContinue">
+            </section>
 
 
-        <section id="secFullName">
-            <p>Para receber a leitura GRATUITA da sua Expressão personalizada, preencha os dados abaixo...</p>
-            <h3>Seu genero<hr></h3>
-            <select id="selectSex">
-                <option value="M">Masculino</option>
-                <option value="F">Feminino</option>
-                <option value="">Prefino não dizer</option>
-            </select>
-            <h3>Nome completo de nascimento<hr></h3>
-            <input type="text" id="inputFullName" placeholder="Nome completo">
-            <input type="button" value="Clique aqui para continuar a leitura" onclick="starAnalyzing()">
-        </section>
-        
-        <section id="secEmail">
-            <p>Para receber a leitura GRATUITA da sua Expressão personalizada, preencha os dados abaixo...</p>
-            <h3>Seu endereço de E-mail<hr></h3>
-            <input type="email" id="inputEmail" placeholder="Endereço de E-mail (obrigatório)">
-            <h3>Nome completo de nascimento<hr></h3>
-            <select id="selectSex">
-                <option value="">Prefino não dizer</option>
-                <option value="casado">Casado(a)</option>
-                <option value="solteiro">Solteiro(a)</option>
-                <option value="namorando">Namorando(a)</option>
-                <option value="noivo">Noivo(a)</option>
-                <option value="separado">Separado(a)</option>
-                <option value="divorciado">Divorciado(a)</option>
-                <option value="viuvo">Viúvo(a)</option>
-            </select>
-            <input type="button" value="Clique aqui para continuar a leitura" onclick="starAnalyzing()">
-        </section>
+            <section id="secAnalizing">
+                <h2 id="analizingName"></h2>
+                <h2 id="analizingDate"></h2>
+                <p class="text1">Supreendente, como <span>você nunca viu antes!</span></p>
+                <p class="text2">Numerologias <span>Cabalística!</span></p>
+                <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
+            </section>
 
 
-        <section id="secBuy">
-            <h2>Compre nosso curso por um preço x e entenda mais sobre você por meio da Numerologia</h2>
-            <h3>aqui vai ter a tela montada</h3>
-        </section>
+            <section id="secFullName">
+                <p>Para receber a leitura GRATUITA da sua Expressão personalizada, preencha os dados abaixo...</p>
+                <h3>Seu genero<hr></h3>
+                <select id="selectSex">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="">Prefino não dizer</option>
+                </select>
+                <h3>Nome completo de nascimento<hr></h3>
+                <input type="text" id="inputFullName" placeholder="Nome completo">
+                <input type="button" value="Clique aqui para continuar a leitura" onclick="starAnalyzing()" class="btnContinue">
+            </section>
+            
+            <section id="secEmail">
+                <p>Para receber a leitura GRATUITA da sua Expressão personalizada, preencha os dados abaixo...</p>
+                <h3>Seu endereço de E-mail<hr></h3>
+                <input type="email" id="inputEmail" placeholder="Endereço de E-mail (obrigatório)">
+                <h3>Nome completo de nascimento<hr></h3>
+                <select id="selectSex">
+                    <option value="">Prefino não dizer</option>
+                    <option value="casado">Casado(a)</option>
+                    <option value="solteiro">Solteiro(a)</option>
+                    <option value="namorando">Namorando(a)</option>
+                    <option value="noivo">Noivo(a)</option>
+                    <option value="separado">Separado(a)</option>
+                    <option value="divorciado">Divorciado(a)</option>
+                    <option value="viuvo">Viúvo(a)</option>
+                </select>
+                <input type="button" value="Clique aqui para continuar a leitura" onclick="starAnalyzing()" class="btnContinue">
+            </section>
 
 
-    </main>
+            <section class="secBuy" id="secBuy">
+                <div id="header">
+                    <p>Clique no botão abaixo para pegar seu Mapa Numerológico Completo - De <span><s>R$ 347</s> Por Apenas R$ 197</span></p>
+                </div>
+                <div id="body">
+                    <div>
+                        <img src="./src/images/capa-mapa.png" alt="" id="courseCover">
+                    </div>
+                    <div>
+                        <a href="#">Comprar Agora</a>
+                        <div class="segurit"><img src="./src/images/lock.png" alt="" id="lock"><p>Todas as compras são processadas em um servidor seguro</p></div>
+                        <img src="./src/images/pagamentos.png" alt="cartões aceitados" id="payment">
+                        <h4>Mais de meio milhão de pessoas encomendaram o seu Mapa Numerológico Completo!</h4>
+                        <div id="testimony"><img src="./src/images/testemunho.jpg" alt=""><p>"Quando você terminar de ler seu Mapa Numerológico Completo, você vai pensar que foi escrito por alguém que conhece você... Vai deixar você perplexo!" - Silvia, Rio de Janeiro, R.J.</p></div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <img src="./src/images/garantia-2.png" alt="">
+                    <p>Faça sua compra agora e você receberá seu Mapa Numerológico Completo. Sabemos que você obterá um enorme valor com esta análise detalhada, mas, se dentro do prazo de 7 dias você decidir que não está 100% satisfeito com seu Mapa Numerológico Completo, envie-nos um e-mail para contato@testenumerologico.com.br solicitando o seu reembolso.</p>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
     <script src="./src/script/Json.js"></script>
     <script src="./src/script/script.js"></script>
     <script src="./src/script/audios.js"></script>

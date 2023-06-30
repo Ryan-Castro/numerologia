@@ -111,7 +111,7 @@ function calcDestiny(){
 }
 
 function calcExpression(){
-    let nameFull = _fullName.replaceAll(" ", "").replaceAll("a", "").replaceAll("e", "").replaceAll("i", "").replaceAll("o", "").replaceAll("u", "")
+    let nameFull = _fullName.toLocaleLowerCase().replaceAll(" ", "").replaceAll("a", "").replaceAll("e", "").replaceAll("i", "").replaceAll("o", "").replaceAll("u", "")
     let sumNumber = 0
     nameFull.split("").forEach(letter=>{
         sumNumber += tableCabalistic[letter]
@@ -120,7 +120,7 @@ function calcExpression(){
 }
 
 function calcMotivation(){
-    let nameFull = _fullName.replaceAll(" ", "")
+    let nameFull = _fullName.toLocaleLowerCase().replaceAll(" ", "")
     let sumNumber = 0
     nameFull.split("").forEach(letter=>{
         switch (letter) {
@@ -168,7 +168,7 @@ function setCalendar(){
             document.querySelector("#inputDay").innerHTML += `<option value='${day}'>${day}</option>`
         }
     }
-    for(let month=1;month<12;month++){
+    for(let month=1;month<13;month++){
         if(month<10){
             document.querySelector("#inputMonth").innerHTML += `<option value='0${month}'>${months[month-1]}</option>`
         } else {
