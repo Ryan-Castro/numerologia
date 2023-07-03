@@ -157,7 +157,7 @@ function hideSec(){
     })
 }
 function setCalendar(){
-    let months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Desembro"]
+    let months = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"]
     document.querySelector("#inputDay").innerHTML = `<option value="">Coloque um Dia</option>`
     document.querySelector("#inputMonth").innerHTML = `<option value="">Coloque um Mes</option>`
     document.querySelector("#inputYear").innerHTML = `<option value="">Coloque um Ano</option>`

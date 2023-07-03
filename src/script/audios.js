@@ -23,6 +23,24 @@ function playPresentationDestiny(){
         if(audio.currentTime.toFixed(2)>7){
             document.querySelector(".text2").style.opacity = 1
         }
+        if(audio.currentTime.toFixed(2)>15){
+            document.querySelector(".text1").style.opacity = 0
+            document.querySelector(".text2").style.opacity = 0
+        }
+        if(audio.currentTime.toFixed(2)>17){
+            document.querySelector(".text1").innerHTML = "Você fez uma <span>escolha!</span>"
+            document.querySelector(".text2").innerHTML = "As oportunidades que você <span>pode ter!</span>"
+        }
+        if(audio.currentTime.toFixed(2)>24){
+            document.querySelector(".text1").style.opacity = 1
+        }
+        if(audio.currentTime.toFixed(2)>27){
+            document.querySelector(".text2").style.opacity = 1
+        }
+        if(audio.currentTime.toFixed(2)>40){
+            document.querySelector(".text1").style.opacity = 0
+            document.querySelector(".text2").style.opacity = 0
+        }
     }
 }
 function playDestiny(){
@@ -135,6 +153,9 @@ function playEnded(){
     audio.play()
     audio.addEventListener("ended", audio2)
     function audio2(){
+        document.querySelector("#secAnalizing").innerHTML = `
+        <img src="./src/images/capa-mapa.jpeg" class="imgFocus">
+        `
         audio.removeEventListener("ended", audio2)
         audio.src = `./src/audios/end2.mp3`
         audio.play()
