@@ -112,7 +112,7 @@ function playExpression(){
     let numberExpression = calcExpression()
     document.querySelector("#secAnalizing").innerHTML = `
     <h2>Seu numero de Expressão é o: ${numberExpression}</h2>
-    <img src="./src/images/expressao/${numberExpression}.png" class="imgFocus">
+    <img src="./src/images/Expressao/${numberExpression}.png" class="imgFocus">
     `
     audio.src = `./src/audios/expression/expressao${numberExpression}.mp3`
     audio.play()
