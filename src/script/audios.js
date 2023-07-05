@@ -49,7 +49,7 @@ function playDestiny(){
     let numberDestiny = calcDestiny()
     document.querySelector("#secAnalizing").innerHTML = `
     <h2>Seu numero de Destino é o: ${numberDestiny}</h2>
-    <img src="./src/images/destino/${numberDestiny}.png" class="imgFocus">
+    <img src="./src/images/Destino/${numberDestiny}.png" class="imgFocus">
     `
     audio.src = `./src/audios/destiny/destino${numberDestiny}.mp3`
     audio.play()
@@ -155,7 +155,7 @@ function playMotivarion(){
     let numberMotivation = calcMotivation()
     document.querySelector("#secAnalizing").innerHTML = `
     <h2>Seu numero de Motivação é o: ${numberMotivation}</h2>
-    <img src="./src/images/motivacao/${numberMotivation}.png" class="imgFocus">
+    <img src="./src/images/Motivacao/${numberMotivation}.png" class="imgFocus">
     `
     audio.src = `./src/audios/motivation/motivacao${numberMotivation}.mp3`
     audio.play()
