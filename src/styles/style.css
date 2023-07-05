@@ -32,6 +32,7 @@ main{
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(5 18 42/49%);
+    position: relative;
 }
 
 section{

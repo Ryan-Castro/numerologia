@@ -2,6 +2,8 @@ function playPresentationDestiny(){
     if(checkInputs()){
         return
     }
+    document.querySelector("#container2").style.display = "none"
+    document.querySelector("#playAndStop").style.display = "flex"
     let [selectedDay, selectedMonth, selectedYear] = getDate()
     document.querySelector("#analizingName").innerHTML = _name
     document.querySelector("#analizingDate").innerHTML = `${selectedDay} / ${selectedMonth} / ${selectedYear}`
@@ -47,7 +49,7 @@ function playDestiny(){
     let numberDestiny = calcDestiny()
     document.querySelector("#secAnalizing").innerHTML = `
     <h2>Seu numero de Destino é o: ${numberDestiny}</h2>
-    <img src="./src/images/Destino/${numberDestiny}.png" class="imgFocus">
+    <img src="./src/images/destino/${numberDestiny}.png" class="imgFocus">
     `
     audio.src = `./src/audios/destiny/destino${numberDestiny}.mp3`
     audio.play()
@@ -59,17 +61,37 @@ function playDestiny(){
     }
 }
 function playIntroductionExpression(){
+    let table = false
+    let returnTable = false
     audio.src = `./src/audios/introductionExpression.mp3`
     audio.play()
     audio.addEventListener("ended", intExpre)
+    audio.addEventListener("timeupdate", timeupdateAudio)
     function intExpre(){
         introductionExpression = true
         showSec('secFullName')
-        audio.removeEventListener("ended", intExpre)
+        document.querySelector("#playAndStop").style.display = "none"
+        audio.removeEventListener("ended", intExpre)   
+        audio.removeEventListener("timeupdate", timeupdateAudio)
+    }
+    function timeupdateAudio(){
+        if(audio.currentTime.toFixed(2)>62 && !table){
+            document.querySelector("#secAnalizing").innerHTML = `
+                <img src="./src/images/table.jpeg" class="imgFocus">
+            `
+            table = true
+        }
+        if(audio.currentTime.toFixed(2)>77 && !returnTable){
+            document.querySelector("#secAnalizing").innerHTML = `
+            <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
+            `
+            returnTable = true
+        }
     }
 }
 function playPresentationExpression(){
     showSec('secAnalizing')
+    document.querySelector("#playAndStop").style.display = "flex"
     document.querySelector("#secAnalizing").innerHTML = `
     <h2 id="analizingName"></h2>
     <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
@@ -90,7 +112,7 @@ function playExpression(){
     let numberExpression = calcExpression()
     document.querySelector("#secAnalizing").innerHTML = `
     <h2>Seu numero de Expressão é o: ${numberExpression}</h2>
-    <img src="./src/images/Expressao/${numberExpression}.png" class="imgFocus">
+    <img src="./src/images/expressao/${numberExpression}.png" class="imgFocus">
     `
     audio.src = `./src/audios/expression/expressao${numberExpression}.mp3`
     audio.play()
@@ -108,11 +130,13 @@ function playintroductionMotivation(){
     function intMot(){
         introductionMotivation = true
         showSec('secEmail')
+        document.querySelector("#playAndStop").style.display = "none"
         audio.removeEventListener("ended", intMot)
     }
 }
 function playPresentetionMotivation(){
     showSec('secAnalizing')
+   document.querySelector("#playAndStop").style.display = "flex"
     document.querySelector("#secAnalizing").innerHTML = `
     <h2 id="analizingName"></h2>
     <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
@@ -154,7 +178,7 @@ function playEnded(){
     audio.addEventListener("ended", audio2)
     function audio2(){
         document.querySelector("#secAnalizing").innerHTML = `
-        <img src="./src/images/capa-mapa.jpeg" class="imgFocus">
+        <img src="./src/images/capa-mapa.png" class="imgFocus">
         `
         audio.removeEventListener("ended", audio2)
         audio.src = `./src/audios/end2.mp3`
@@ -165,6 +189,7 @@ function playEnded(){
         audio.removeEventListener("ended", audio3)
         ended = true
         showSec('secBuy')
+        document.querySelector("#playAndStop").style.display = "none"
         audio.src = `./src/audios/end3.mp3`
         audio.play()
     }

@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/style.css">
+    <link rel="stylesheet" href="./src/styles/containers.css">
     <title>Numerologia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <audio id="mainAudio" src=""></audio>
     <div id="container1">
         <img src="src/images/logo.png" alt="Logo">
         <main>
+            <div id="playAndStop" >
+                <button onclick="playAndStop()">
+                    <span class="material-symbols-outlined">
+                        play_arrow
+                    </span>
+                </button>
+            </div>
             <section id="secInputName">
                 <h1>TESTE NUMEROLÓGICO REVELA</h1>
                 <h2>Descubra pela sua Data de nascimento o melhor caminho para vocêseguir em 2023</h2>
@@ -60,7 +69,7 @@
                 <p>Para receber a leitura GRATUITA da sua Expressão personalizada, preencha os dados abaixo...</p>
                 <h3>Seu endereço de E-mail<hr></h3>
                 <input type="email" id="inputEmail" placeholder="Endereço de E-mail (obrigatório)">
-                <h3>Nome completo de nascimento<hr></h3>
+                <h3>Estado Civil<hr></h3>
                 <select id="selectSex">
                     <option value="">Prefiro não dizer</option>
                     <option value="casado">Casado(a)</option>
@@ -84,21 +93,77 @@
                         <img src="./src/images/capa-mapa.jpeg" alt="" id="courseCover">
                     </div>
                     <div>
-                        <a href="#">Comprar Agora</a>
+                        <a href="https://pay.kiwify.com.br/xekEQ95">Comprar Agora</a>
                         <div class="segurit"><img src="./src/images/lock.png" alt="" id="lock"><p>Todas as compras são processadas em um servidor seguro</p></div>
                         <img src="./src/images/pagamentos.png" alt="cartões aceitados" id="payment">
                         <h4>Mais de meio milhão de pessoas encomendaram o seu Mapa Numerológico Completo!</h4>
-                        <div id="testimony"><img src="./src/images/testemunho.jpg" alt=""><p>"Quando você terminar de ler seu Mapa Numerológico Completo, você vai pensar que foi escrito por alguém que conhece você... Vai deixar você perplexo!" - Silvia, Rio de Janeiro, R.J.</p></div>
+                        <div id="testimony"><img src="./src/images/testemunho.png" alt=""><p>"O Mapa realmente é incrível! Ele te mostra tudo sobre você mesmo, foi um choque quando comecei a ler e vi tantas verdades! Gratidão a equipe por essa trabalho magnifico!" - Silvia, Rio de Janeiro, R.J.</p></div>
                     </div>
                 </div>
                 <div id="footer">
                     <img src="./src/images/garantia-2.png" alt="">
-                    <p>Faça sua compra agora e você receberá seu Mapa Numerológico Completo. Sabemos que você obterá um enorme valor com esta análise detalhada, mas, se dentro do prazo de 7 dias você decidir que não está 100% satisfeito com seu Mapa Numerológico Completo, envie-nos um e-mail para contato@testenumerologico.com.br solicitando o seu reembolso.</p>
+                    <p>Faça sua compra agora e você receberá seu Mapa Numerológico Completo. Sabemos que você obterá um enorme valor com esta análise detalhada, mas, se dentro do prazo de 7 dias você decidir que não está 100% satisfeito com seu Mapa Numerológico Completo.</p>
                 </div>
             </section>
 
 
         </main>
+    </div>
+    <div id="container2">
+        <div>
+            <a id="btn1" href="#sec1">Eu quero meu mapa Numerológico!</a>
+            <p id="p1">Neste vídeo nós iremos explorar de forma <span>completamente personalizada</span> tudo o que os seus números de destino, expressão e motivação podem revelar sobre você e o seu destino. <span>Você irá se surpreender com o que irá</span> descobrir aqui...</p>
+            <ul>
+                <li>Você pode estar ignorando “sem querer” os seus desejos mais profundos e nós iremos te guiar pelo caminho certo <span>para que você possa finalmente alcançá-los</span>...</li>
+                <li>Como e onde focar a sua energia para acabar com as dificuldades e diminuir as suas fraquezas...</li>
+                <li>O que desperta o seu entusiasmo em relação a sua carreira e como cultivar a sua dedicação para crescer profissionalmente e colher os frutos de todo o seu esforço...</li>
+                <li>Como utilizar os seus talentos e <span>forças secretas para conseguir o que você quiser</span>...</li>
+                <li>Vou mostrar os traços da sua personalidade, o seu caráter <span>e a forma que você lida com as pessoas</span>...</li>
+                <li>Quais as oportunidades escondidas no seu destino e as lições que você deve aprender <span>para superar os desafios e conquistar uma vida melhor</span>...</li>
+                <li id="liEnd">Entre muitas outras revelações...</li>
+            </ul>
+            <a id="btn2" href="#container1">Clique aqui para receber o seu Relatório numerológico personalizado gratuito!</a>
+            <p id="p2">Mais de <span>43.201</span> Pessoas Abundantes Receberam o seu Mapa Numerológico para Encontrar o Melhor Caminho Para Alcançar Seus Objetivos de Vida...</p>
+            <div id="containerCard">
+                <div class="card">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium illo voluptatem eveniet enim voluptas et saepe repellendus deserunt repudiandae dolores nihil, numquam quisquam vitae, cum esse possimus quaerat dolore.</p>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium illo voluptatem eveniet enim voluptas et saepe repellendus deserunt repudiandae dolores nihil, numquam quisquam vitae, cum esse possimus quaerat dolore.</p>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium illo voluptatem eveniet enim voluptas et saepe repellendus deserunt repudiandae dolores nihil, numquam quisquam vitae, cum esse possimus quaerat dolore.</p>
+                </div>
+                <div class="card">
+                    <img src="" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium illo voluptatem eveniet enim voluptas et saepe repellendus deserunt repudiandae dolores nihil, numquam quisquam vitae, cum esse possimus quaerat dolore.</p>
+                </div>
+            </div>
+            <section class="secBuy" id="sec1">
+                <div id="header">
+                    <p>Clique no botão abaixo para pegar seu Mapa Numerológico Completo - De <span><s>R$ 347</s> Por Apenas R$ 197</span></p>
+                </div>
+                <div id="body">
+                    <div>
+                        <img src="./src/images/capa-mapa.jpeg" alt="" id="courseCover">
+                    </div>
+                    <div>
+                        <a href="https://pay.kiwify.com.br/xekEQ95">Comprar Agora</a>
+                        <div class="segurit"><img src="./src/images/lock.png" alt="" id="lock"><p>Todas as compras são processadas em um servidor seguro</p></div>
+                        <img src="./src/images/pagamentos.png" alt="cartões aceitados" id="payment">
+                        <h4>Mais de meio milhão de pessoas encomendaram o seu Mapa Numerológico Completo!</h4>
+                        <div id="testimony"><img src="./src/images/testemunho.png" alt=""><p>"O Mapa realmente é incrível! Ele te mostra tudo sobre você mesmo, foi um choque quando comecei a ler e vi tantas verdades! Gratidão a equipe por essa trabalho magnifico!" - Silvia, Rio de Janeiro, R.J.</p></div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <img src="./src/images/garantia-2.png" alt="">
+                    <p>Faça sua compra agora e você receberá seu Mapa Numerológico Completo. Sabemos que você obterá um enorme valor com esta análise detalhada, mas, se dentro do prazo de 7 dias você decidir que não está 100% satisfeito com seu Mapa Numerológico Completo.</p>
+                </div>
+            </div>
+        </section>
     </div>
     <script src="./src/script/Json.js"></script>
     <script src="./src/script/script.js"></script>

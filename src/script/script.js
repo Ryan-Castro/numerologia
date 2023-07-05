@@ -13,8 +13,6 @@ let introductionExpression = false
 let introductionMotivation = false
 let ended = false
 
-
-
 function starAnalyzing() {
     if(!selectedName){
         _name = document.querySelector("#inputName").value
@@ -138,13 +136,18 @@ function calcMotivation(){
 }
 
 function synthesizeNumber(number){
-    while (number>9) {
-        let digito1 = number.toString()[number.toString().length-1]
-        number = Number(number) - Number(digito1)
-        number = number / 10
-        number = Number(number) + Number(digito1)
+    let baseNum = Number(number)
+    while (baseNum>9) {
+        if(baseNum == 11 || baseNum == 22 || baseNum == 33){
+            return baseNum
+        }
+        let baseSum = 0
+        baseNum.toString().split("").forEach(num=>{
+            baseSum += Number(num)
+        })
+        baseNum = baseSum
     }
-    return number
+    return baseNum
 }
 
 function showSec(section){
@@ -177,6 +180,13 @@ function setCalendar(){
     }
     for(let year=0;year<100;year++){
         document.querySelector("#inputYear").innerHTML += `<option value=${(2023 - year)}>${(2023 - year)}</option>`
+    }
+}
+function playAndStop(){
+    if(audio.paused){
+        audio.play()
+    } else {
+        audio.pause()
     }
 }
 showSec("secInputName")

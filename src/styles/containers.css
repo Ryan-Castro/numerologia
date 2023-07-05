@@ -1,0 +1,141 @@
+#container2{
+    background-image: url("../images/bg2.jpg");
+    color: white;
+    font-family: sans-serif;
+}
+#container2>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom,#17191c 2%,rgba(0,28,49,0.5) 93%,rgba(0,28,49,0.2) 100%);
+    padding: 50px;
+}
+
+#btn1{
+    background: #ff0085;
+    color: #fff!important;
+    font-size: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 64px;
+    padding: 10px 25px!important;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px 0 rgb(116 79 168/75%);
+    font-family: raleway,sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+#p1{
+    max-width: 900px;
+    font-size: 27px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-family: sans-serif;
+    text-align: center;
+}
+#p1 span{
+    color: #d6c670;
+}
+#container2 ul{
+    font-size: 19px;
+    max-width: 900px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+#container2 li{
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 35px;
+}
+#container2 li::after{
+    background-image: url("../images/seta-03.png");
+    content: " ";
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+}
+#container2 li span{
+   border-bottom: 1px solid #d6c670;
+}
+#liEnd{
+    color: #d6c670;
+}
+#btn2{
+    background: #a11111;
+    color: #fff;
+    font-size: 20px;
+    font-family: "sans-serif";
+    padding: 20px 40px;
+    display: block;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    animation: expandBtn 3s linear infinite;
+    position: relative;
+    margin-bottom: 70px;
+    text-decoration: none;
+}
+@keyframes expandBtn {
+    0% { transform:scale(1, 1);}
+    50% { transform:scale(1.07, 1.06);}
+    100% { transform:scale(1, 1);}
+}
+#btn2::before{
+    content: "";
+    background-image: url("../images/seta-02.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -35px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+#p2{
+    max-width: 900px;
+    font-size: 27px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-family: sans-serif;
+    text-align: center;
+}
+#p2 span{
+    text-decoration: underline;
+    color: #d6c670;
+}
+
+#containerCard{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.card{
+    width: 20%;
+    text-align: justify;
+    background: rgb(64 13 63/59%);
+    border: 1px solid white;
+    padding: 10px;
+}
+#container2 section{
+    display: flex !important;
+    margin-top: 100px;
+    max-width: 66.66%;
+}
+#playAndStop{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    z-index: 100;
+}
+#playAndStop button{
+    border-radius: 25px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
