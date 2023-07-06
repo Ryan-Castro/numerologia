@@ -77,7 +77,7 @@ function playIntroductionExpression(){
     function timeupdateAudio(){
         if(audio.currentTime.toFixed(2)>62 && !table){
             document.querySelector("#secAnalizing").innerHTML = `
-                <img src="./src/images/table.jpeg" class="imgFocus">
+                <img src="./src/images/table.jpeg" class="imgFocus" id="tableImg">
             `
             table = true
         }
