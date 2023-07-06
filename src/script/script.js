@@ -1,5 +1,6 @@
 let synth = new SpeechSynthesisUtterance();
 let audio = document.querySelector("#mainAudio")
+let audioFundo = document.querySelector("#audioFundo")
 let _name = ""
 let _fullName = ""
 let selectedName = false
