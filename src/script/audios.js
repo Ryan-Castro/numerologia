@@ -83,7 +83,7 @@ function playIntroductionExpression(){
         }
         if(audio.currentTime.toFixed(2)>77 && !returnTable){
             document.querySelector("#secAnalizing").innerHTML = `
-            <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
+            <img src="./src/images/analizeImg.png" alt="" class="imgSpin">
             `
             returnTable = true
         }
@@ -94,7 +94,7 @@ function playPresentationExpression(){
     document.querySelector("#playAndStop").style.display = "flex"
     document.querySelector("#secAnalizing").innerHTML = `
     <h2 id="analizingName"></h2>
-    <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
+    <img src="./src/images/analizeImg.png" alt="" class="imgSpin">
 
     `
     document.querySelector("#analizingName").innerHTML = _fullName
@@ -139,7 +139,7 @@ function playPresentetionMotivation(){
    document.querySelector("#playAndStop").style.display = "flex"
     document.querySelector("#secAnalizing").innerHTML = `
     <h2 id="analizingName"></h2>
-    <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
+    <img src="./src/images/analizeImg.png" alt="" class="imgSpin">
     `
     document.querySelector("#analizingName").innerHTML = _fullName
     audio.src = "./src/audios/presentationMotivation.mp3"
@@ -171,7 +171,7 @@ function playEnded(){
     audio.src = `./src/audios/end1.mp3`
     document.querySelector("#secAnalizing").innerHTML = `
     <h2 id="analizingName"></h2>
-    <img src="https://static.wixstatic.com/media/204c2d_e9e0cd7cafdf41c88c4651d449dd9556~mv2.png/v1/fit/w_500,h_500,q_90/file.png" alt="" class="imgSpin">
+    <img src="./src/images/analizeImg.png" alt="" class="imgSpin">
     `
     document.querySelector("#analizingName").innerHTML = _fullName
     audio.play()
