@@ -101,9 +101,9 @@ function checkInputs(){
 
 function calcDestiny(){
     let [selectedDay, selectedMonth, selectedYear] = getDate()
-    let sDay = synthesizeNumber(selectedDay)
-    let sMonth = synthesizeNumber(selectedMonth)
-    let sYear = synthesizeNumber(selectedYear)
+    let sDay = Number(selectedDay.toString()[0]) + Number(selectedDay.toString()[1]) 
+    let sMonth = Number(selectedMonth.toString()[0]) + Number(selectedMonth.toString()[1]) 
+    let sYear = Number(selectedYear.toString()[0]) + Number(selectedYear.toString()[1]) + Number(selectedYear.toString()[2]) + Number(selectedYear.toString()[3])
     let sumNumber = sDay + sMonth + sYear
     let sDestiny = synthesizeNumber(sumNumber)
     return sDestiny
