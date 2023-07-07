@@ -164,6 +164,16 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
+footer{
+    background-color: rgb(78, 78, 78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    gap: 20px;
+    padding: 20px;
+}
 @media (max-width: 600px) {
     #container2>div{
         padding: 20px;
@@ -173,6 +183,9 @@
     }
     .card{
         width: 100%;
+    }
+    footer h2{
+        font-size: 18px;
     }
 }
 @media (max-width: 450px) {
